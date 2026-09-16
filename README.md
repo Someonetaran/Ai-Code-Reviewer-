@@ -58,7 +58,7 @@ TO clone the project , follow this steps.
 
 **1.Clone the Repository**
 ```bash
-  git clone https://github.com/prashik-54/ai-code-reviewer.git
+  git clone https://github.com/Someonetaran/Ai-Code-Reviewer-.git
 ```
 
 **2.Configure the Backend**
@@ -104,9 +104,8 @@ The application will open automatically in your browser at http://localhost:3000
 
 ## **✍️ Author**
 
-Prashik Wasnik
-- **LinkedIn:** [prashik-wasnik](https://www.linkedin.com/in/prashik-wasnik/)
-- **GitHub:** [prashik-54](https://github.com/prashik-54)
+Taran
+- **GitHub:** [Someonetaran](https://github.com/Someonetaran)
 
 
 

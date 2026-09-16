@@ -220,13 +220,9 @@ function App() {
             {/* Footer with author links */}
             <footer className="App-footer">
                 <p>
-                    Developed by Prashik :
-                    <a href="https://www.linkedin.com/in/prashik-wasnik/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin /> Prashik Wasnik
-                    </a>
-                    <span className="footer-separator">|</span>
-                    <a href="https://github.com/prashik-54" target="_blank" rel="noopener noreferrer">
-                        <FaGithub /> Prashik-54
+                    Developed by Taran :
+                    <a href="https://github.com/Someonetaran" target="_blank" rel="noopener noreferrer">
+                        <FaGithub /> Taran
                     </a>
                 </p>
             </footer>
