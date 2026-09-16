@@ -25,6 +25,7 @@ if (!process.env.GEMINI_API_KEY) {
 // Create a client using the GEMINI_API_KEY from .env.
 // This client is reused for multiple requests to the AI model.
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.6-flash';
 
 // --- Health Check / Root Endpoints ---
 app.get('/', (req, res) => {
@@ -52,7 +53,7 @@ app.post('/api/review', async (req, res) => {
         }
 
         // Choose a generative model instance.
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+        const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
 
         // Detailed prompt instructing the model to return a markdown-formatted review.
         const prompt = `
@@ -125,7 +126,7 @@ app.post('/api/fix', async (req, res) => {
             return res.status(400).json({ error: 'Code is required.' });
         }
 
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+        const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
 
         // Prompt instructs model to reply with only the corrected code in a single code block.
         const prompt = `
@@ -166,7 +167,7 @@ app.post('/api/complexity', async (req, res) => {
             return res.status(400).json({ error: 'Code is required.' });
         }
 
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+        const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
 
         const prompt = `
 🧠 Act as a computer science expert specializing in algorithm analysis.
@@ -218,7 +219,7 @@ app.post('/api/document', async (req, res) => {
             return res.status(400).json({ error: 'Code is required.' });
         }
 
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+        const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
 
         const prompt = `
 🧑‍💻 Act as a senior software engineer writing technical documentation.
@@ -286,7 +287,7 @@ app.post('/api/convert', async (req, res) => {
             return res.status(400).json({ error: 'Source and target languages are required.' });
         }
 
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+        const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
 
         // Prompt asks for a precise translation and requests only a single markdown code block.
         const prompt = `
