@@ -6,7 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
-import { FaCode, FaBolt, FaWrench, FaSun, FaMoon, FaChartLine, FaFileAlt, FaSyncAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaCode, FaBolt, FaWrench, FaSun, FaMoon, FaChartLine, FaFileAlt, FaSyncAlt, FaGithub } from 'react-icons/fa';
 import CodeEditor from '@uiw/react-textarea-code-editor';
 import './App.css';
 
